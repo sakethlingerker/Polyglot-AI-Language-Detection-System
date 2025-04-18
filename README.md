@@ -10,7 +10,7 @@ A web application that uses machine learning to detect the language of input tex
 
 ## Live Demo
 
-Visit the [GitHub Pages site](https://YOUR_USERNAME.github.io/NLP/) for a project overview.
+Visit the [GitHub Pages site](https://vishalvoweldas.github.io/Polyglot-AI---Language-Detection-and-Translation-System/) for a project overview.
 
 ## Local Setup
 
@@ -23,8 +23,8 @@ Visit the [GitHub Pages site](https://YOUR_USERNAME.github.io/NLP/) for a projec
 
 1. Clone the repository:
    ```
-   git clone https://github.com/YOUR_USERNAME/NLP.git
-   cd NLP
+   git clone https://github.com/vishalvoweldas/Polyglot-AI---Language-Detection-and-Translation-System.git
+   cd Polyglot-AI---Language-Detection-and-Translation-System
    ```
 
 2. Install required dependencies:
@@ -59,4 +59,4 @@ The project is deployed using GitHub Pages. The static site provides information
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE). 
+This project is open source and available under the [MIT License](LICENSE).
