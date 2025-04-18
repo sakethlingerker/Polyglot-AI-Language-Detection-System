@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyglot AI – Language Detection & Translation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Orbitron:wght@400..900&display=swap');
+
+        :root {
+            --bg: #1e1e2e;
+            --fg: #ffffff;
+            --primary1: #4a90e2;
+            --primary2: #50e3c2;
+            --secondary: #ff4081;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: 'Orbitron', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+        textarea {
+            width: 80%;
+            height: 120px;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            font-size: 1.3em;
+            background: #2a2a3b;
+            color: var(--fg);
+            outline: none;
+            font-family: 'Amita', cursive;
+        }
+        button {
+            background: linear-gradient(135deg, var(--primary1), var(--primary2));
+            border: none;
+            padding: 14px 28px;
+            font-size: 1.4em;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: 0.3s ease-in-out;
+            font-family: 'Orbitron', sans-serif;
+            margin: 10px;
+        }
+        button:hover {
+            background: var(--secondary);
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 1.7em;
+            font-weight: bold;
+            font-family: 'Amita', cursive;
+        }
+        .hidden {
+            display: none;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        h1 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 30px;
+            margin-top: 40px;
+        }
+        .feature-list {
+            text-align: left;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .feature-list li {
+            margin-bottom: 10px;
+        }
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            text-decoration: none;
+            padding: 15px 30px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            margin-top: 30px;
+            transition: transform 0.3s ease;
+        }
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+        .demo-img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><b>Polyglot AI – Language Detection & Translation</b></h1>
+        
+        <p>An AI-powered tool that can detect and translate between multiple languages including English, Spanish, French, German, Italian, Portuguese, Danish, Turkish, Russian, and Arabic.</p>
+        
+        <h2>Features</h2>
+        <ul class="feature-list">
+            <li>Accurately detect the language of input text</li>
+            <li>Translate text to English from any supported language</li>
+            <li>Simple and intuitive user interface</li>
+            <li>Fast and efficient processing</li>
+        </ul>
+        
+        <h2>How It Works</h2>
+        <p>Polyglot AI uses machine learning algorithms to analyze text patterns and identify languages. The model was trained on a diverse dataset of multiple languages to ensure accuracy and reliability.</p>
+        
+        <h2>Try It Locally</h2>
+        <p>This is a demo page. To use the full application with all features, clone the repository and run it locally:</p>
+        
+        <ol class="feature-list">
+            <li>Clone the repository from GitHub</li>
+            <li>Install the required dependencies</li>
+            <li>Run the Flask server</li>
+            <li>Access the application through your browser</li>
+        </ol>
+        
+        <a href="https://github.com/YOUR_USERNAME/NLP" class="cta-button">View on GitHub</a>
+        
+        <footer>
+            Created with ❤️ by YOUR_NAME
+        </footer>
+    </div>
+</body>
+</html> 

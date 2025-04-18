@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polyglot AI – Language Detection & Translation</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amita:wght@400;700&family=Orbitron:wght@400..900&display=swap');
+
+        :root {
+            --bg: #1e1e2e;
+            --fg: #ffffff;
+            --primary1: #4a90e2;
+            --primary2: #50e3c2;
+            --secondary: #ff4081;
+        }
+        body {
+            background-color: var(--bg);
+            color: var(--fg);
+            font-family: 'Orbitron', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        textarea {
+            width: 80%;
+            height: 120px;
+            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            border: none;
+            font-size: 1.3em;
+            background: #2a2a3b;
+            color: var(--fg);
+            outline: none;
+            font-family: 'Amita', cursive;
+        }
+        button {
+            background: linear-gradient(135deg, var(--primary1), var(--primary2));
+            border: none;
+            padding: 14px 28px;
+            font-size: 1.4em;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            border-radius: 25px;
+            transition: 0.3s ease-in-out;
+            font-family: 'Orbitron', sans-serif;
+            margin: 10px;
+        }
+        button:hover {
+            background: var(--secondary);
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 1.7em;
+            font-weight: bold;
+            font-family: 'Amita', cursive;
+        }
+        .hidden {
+            display: none;
+        }
+        p {
+            font-size: 30px;
+        }
+        h1 {
+            font-size: 50px;
+        }
+        .loader {
+            display: none;
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1><b>Polyglot AI – Language Detection & Translation</b></h1>
+    <p>This tool can detect and translate the following languages: English, Spanish, French, German, Italian, Portuguese, Dutch, Russian, Japanese, Arabic.</p>
+
+    <textarea id="textInput" placeholder="Enter text..."></textarea>
+    <button onclick="detectLanguage()">Detect Language</button>
+    <button onclick="detectAndTranslate()">Detect & Translate</button>
+
+    <div id="loader" class="loader">🔄 Processing...</div>
+    <div id="output"></div>
+
+    <script>
+        async function detectLanguage() {
+            const text = document.getElementById('textInput').value;
+            const loader = document.getElementById('loader');
+            const output = document.getElementById('output');
+
+            if (!text.trim()) {
+                output.innerText = "⚠️ Please enter some text.";
+                return;
+            }
+
+            loader.style.display = "block";
+            output.innerText = "";
+
+            try {
+                console.log("Sending request to detect language...");
+                const response = await fetch("http://localhost:5000/detect", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ text: text })
+                });
+
+                if (!response.ok) throw new Error(`Server error: ${response.status}`);
+
+                const data = await response.json();
+                loader.style.display = "none";
+                output.innerText = `📝 Detected Language: ${data.language}`;
+            } catch (error) {
+                console.error("Error:", error);
+                loader.style.display = "none";
+                output.innerText = "❌ Error detecting language.";
+            }
+        }
+
+        async function detectAndTranslate() {
+            const text = document.getElementById('textInput').value;
+            const loader = document.getElementById('loader');
+            const output = document.getElementById('output');
+
+            if (!text.trim()) {
+                output.innerText = "⚠️ Please enter some text.";
+                return;
+            }
+
+            loader.style.display = "block";
+            output.innerText = "";
+
+            try {
+                console.log("Sending request to detect and translate...");
+                const response = await fetch("http://localhost:5000/detect_translate", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ text: text })
+                });
+
+                if (!response.ok) throw new Error(`Server error: ${response.status}`);
+
+                const data = await response.json();
+                loader.style.display = "none";
+                output.innerHTML = `
+                    📝 Detected Language: ${data.detected_language} <br>
+                    🌍 Translated Text: ${data.translated_text}
+                `;
+            } catch (error) {
+                console.error("Error:", error);
+                loader.style.display = "none";
+                output.innerText = "❌ Error processing request.";
+            }
+        }
+    </script>
+    </body>
+</html>
