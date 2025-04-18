@@ -10,7 +10,7 @@ A web application that uses machine learning to detect the language of input tex
 
 ## Live Demo
 
-Visit the [GitHub Pages site](https://vishalvoweldas.github.io/Polyglot-AI---Language-Detection-and-Translation-System/) for a project overview.
+Visit the [GitHub Pages site](https://vishalvoweldas.github.io/Language-Detection-and-Translation-System/) for a project overview.
 
 ## Local Setup
 
@@ -23,8 +23,8 @@ Visit the [GitHub Pages site](https://vishalvoweldas.github.io/Polyglot-AI---Lan
 
 1. Clone the repository:
    ```
-   git clone https://github.com/vishalvoweldas/Polyglot-AI---Language-Detection-and-Translation-System.git
-   cd Polyglot-AI---Language-Detection-and-Translation-System
+   git clone https://github.com/vishalvoweldas/Language-Detection-and-Translation-System.git
+   cd Language-Detection-and-Translation-System
    ```
 
 2. Install required dependencies:
