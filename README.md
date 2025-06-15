@@ -1,62 +1,36 @@
-# Polyglot AI - Language Detection & Translation
+# 🌍 Polyglot AI – Language Detection & Translation
 
-A web application that uses machine learning to detect the language of input text and translate it to English.
+A sleek and intelligent web app that detects the language of your text and instantly translates it into English using machine learning + the Deep Translator API.
 
-## Features
+> 🚀 Built with Flask + ML + Deep Translator + pure frontend magic.
 
-- **Language Detection**: Identifies the language of the input text
-- **Translation**: Translates detected text to English
-- **Supported Languages**: English, Spanish, French, German, Italian, Portuguese, Danish, Turkish, Russian, and Arabic
+---
 
-## Live Demo
+## 🔥 Features
 
-Visit the [GitHub Pages site](https://vishalvoweldas.github.io/Language-Detection-and-Translation-System/) for a project overview.
+- 🧠 **Language Detection** – Detects the language from input text using a trained ML model.
+- 🌐 **Translation to English** – Instantly translates detected text using `deep-translator`.
+- 📚 **Supported Languages** – English, Spanish, French, German, Italian, Portuguese, Danish, Turkish, Russian, Arabic.
 
-## Local Setup
+---
 
-### Prerequisites
+## 📺 Live Demo
 
-- Python 3.6+
-- pip
+> ⚡ Hosted with ❤️ on [Render](https://render.com)  
+> 👉 Try it here: [https://polyglot-ai.onrender.com](https://polyglot-ai.onrender.com) *(your actual link after deployment)*
 
-### Installation
+---
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/vishalvoweldas/Language-Detection-and-Translation-System.git
-   cd Language-Detection-and-Translation-System
-   ```
+## 💻 Local Setup
 
-2. Install required dependencies:
-   ```
-   pip install flask flask-cors deep-translator scikit-learn
-   ```
+### 🛠 Prerequisites
 
-3. Run the application:
-   ```
-   python app.py
-   ```
+- Python 3.7+
+- `pip` (Python package manager)
 
-4. Open your browser and navigate to:
-   ```
-   http://localhost:5000
-   ```
+### 📦 Installation Steps
 
-## How It Works
-
-The application uses a machine learning model trained on multiple languages to classify text. Once the language is detected, it uses the deep-translator library to translate the text to English.
-
-## Project Structure
-
-- `app.py` - Flask web application
-- `language_model.pkl` - Trained language detection model
-- `templates/` - HTML templates for the web interface
-- `Language_Detection.csv` - Training dataset
-
-## Deployment
-
-The project is deployed using GitHub Pages. The static site provides information about the project and instructions for local deployment, as the full functionality requires a Flask backend.
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+1. Clone the repository
+   ```bash
+   git clone https://github.com/your-username/polyglot-ai.git
+   cd polyglot-ai
