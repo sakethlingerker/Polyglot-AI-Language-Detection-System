@@ -1,36 +1,29 @@
-# 🌍 Polyglot AI – Language Detection & Translation
+# Polyglot AI - Language Detection & Translation
 
-A sleek and intelligent web app that detects the language of your text and instantly translates it into English using machine learning + the Deep Translator API.
+A web application that uses machine learning to detect the language of input text and translate it to English.
 
-> 🚀 Built with Flask + ML + Deep Translator + pure frontend magic.
+## 🚀 Features
 
----
+- **Language Detection**: Identifies the language of the input text
+- **Translation**: Translates detected text to English
+- **Supported Languages**: English, Spanish, French, German, Italian, Portuguese, Danish, Turkish, Russian, and Arabic
 
-## 🔥 Features
+## 🌐 Live Demo
 
-- 🧠 **Language Detection** – Detects the language from input text using a trained ML model.
-- 🌐 **Translation to English** – Instantly translates detected text using `deep-translator`.
-- 📚 **Supported Languages** – English, Spanish, French, German, Italian, Portuguese, Danish, Turkish, Russian, Arabic.
+Visit the [Project GitHub Repo](https://github.com/sakethlingerker/Polyglot-AI-Language-Detection-System) for source code and setup instructions.
 
----
+> **Note**: A full live demo requires a Flask backend, so use the local setup for now. Hosting on platforms like Render or Railway is recommended.
 
-## 📺 Live Demo
+## 🛠️ Local Setup
 
-> ⚡ Hosted with ❤️ on [Render](https://render.com)  
-> 👉 Try it here: [https://polyglot-ai.onrender.com](https://polyglot-ai.onrender.com) *(your actual link after deployment)*
+### Prerequisites
 
----
+- Python 3.6+
+- pip
 
-## 💻 Local Setup
+### Installation
 
-### 🛠 Prerequisites
-
-- Python 3.7+
-- `pip` (Python package manager)
-
-### 📦 Installation Steps
-
-1. Clone the repository
+1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/polyglot-ai.git
-   cd polyglot-ai
+   git clone https://github.com/sakethlingerker/Polyglot-AI-Language-Detection-System.git
+   cd Polyglot-AI-Language-Detection-System
